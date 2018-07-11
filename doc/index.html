@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="文档">
+<title>文档</title>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="../index.html">
+        <img src="theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        <span class="face-one-head-logo-text">
+        util.react
+        </span>
+    </a>
+    <span class="face-one-head-slogan">
+        Write less code, do more things!
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="../index.html" class="face-one-head-nav-link">首页</a>
+            <a href="intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="index.html" class="face-one-head-nav-link">文档</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<div class="face-one-layout">
+<div class="face-one-layout-F-line">
+<div class="face-one-layout-sidebar">
+<div class="face-one-nav">
+<span class="face-one-nav-switch fi fi-menu-unfold"></span>
+<div class="face-one-nav-F-inner">
+<div class="face-one-nav-item">
+    <a href="intro.html" class="face-one-nav-item-label">指引</a>
+</div>
+<div class="face-one-nav-item">
+    <a href="index.html" class="face-one-nav-item-label">文档</a>
+</div>
+<!-- face-one-nav-item--group-on 控制默认展开 -->
+<!-- <div class="face-one-nav-item face-one-nav-item--group face-one-nav-item--group-on">
+    <span class="face-one-nav-item-switch fi fi-down"></span>
+    <span class="face-one-nav-item-label">
+        文档
+    </span>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">示例</div>
+        <a href="index.html#style" class="face-one-nav-item-group-item">颜色</a>
+        <a href="index.html#border" class="face-one-nav-item-group-item">边框</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">自定义界面</div>
+        <a href="index.html#less" class="face-one-nav-item-group-item">less</a>
+    </div>
+</div> -->
+
+</div>
+</div>
+</div>
+<div class="face-one-layout-cnt">
+<div id="face-one-cnt" class="face-one-cnt markdown-body">
+<div id="face-one-sidebar" class="face-one-sidebar"></div>
+<h1 id="文档" ><a class="markrun-anchor" href="../Users/rain2/Documents/onface/util.react/#文档"><span class="markrun-anchor-link"></span></a>文档</h1><h2 id="ref" ><a class="markrun-anchor" href="../Users/rain2/Documents/onface/util.react/#ref"><span class="markrun-anchor-link"></span></a>ref</h2>
+    <div class="face-one-code   face-one-code--run  face-one-code--side">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="ref-demo"></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">ref</div>
+                                <div class="face-one-code-info-desc">
+                                    
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-ellipsis"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source"  >
+                            <div class="face-one-code-source-tool">
+                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADogAnGGAC0mIpX4A-RgHoWrKSAC-AGhBpMuAFYJkIKjToEGrAIYD2AVwLR23dkICOViEIAUAchvQcQs-QEngCUvKjkUGZwcOwASsLs2LQYMc6uHp7-gSE4AMKURAAO1MbswGHsleyGcAQCVoGUAu6FApSFcMFlFVW9cFaFMM2t7Z09lcrjjnSYlu5d5ai9vTUE02D21rZQfsLuBHgQY0vLlavscDBQGw4HR1O9QgRWAkvuD6fszGzr3MBCYAABm1KARAcopB9PlVGHBCmYlgC_gCvHCESFlOwpGY5GjUJCTtDTowAEYCWQEomfRgwIhQqlVJHAMBWcK2ajuVCUTDBRYM_kXK5gHAAEgBMQcl2uovF7AAPnKypNCQLoVLhWLhHAANqeWmeAC6my5mHp_OUytVlSkJLktMpVtJ5IdqtJNgI1HY1FyUAg5AA1n8WWyIJ75t0VVbqtQ4JRYDgoJQAOZeTVgOCeVSC6Vp45Ri1YiJ-_1yEnu6guolyBSV3qhFXK5VhNJuGBeLIEMQFHJCDBDd4qxjxDYU1RTdCUchWIjGHBJmAEACisBnNAAQgBPACS6HbwjEtMoITC9ZU6nhAbM85wumoZAM1GSJn0mEGffCEHg94iUTgqDMM56CAAB6ABMODgQAbCA6gHLS8AiD-0T_jODBgTgAAMmEwYIMABM-IEAIyQTgAAs2HqB2XZEGhxFkRRIA-DsHYMIROAAOzYRa3FAA">
+                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                </form>
+                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util.react'</span>)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ref</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">require</span>('<span class="hljs-title">react</span>').<span class="hljs-title">Component</span> </span>{
+    <span class="hljs-keyword">constructor</span>(props) {
+        <span class="hljs-keyword">super</span>(props)
+    }
+    render () {
+        <span class="hljs-keyword">const</span> ref = util.ref(<span class="hljs-keyword">this</span>)
+        <span class="hljs-keyword">const</span> self = <span class="hljs-keyword">this</span>
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{ref</span>`<span class="hljs-attr">root</span>`}&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{ref(</span>'<span class="hljs-attr">span</span>')} &gt;</span>a<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">em</span>
+                    <span class="hljs-attr">ref</span>=<span class="hljs-string">{function(node){</span>
+                        <span class="hljs-attr">self.</span>$<span class="hljs-attr">refs</span> = <span class="hljs-string">self.$refs</span> || {}
+                        <span class="hljs-attr">self.</span>$<span class="hljs-attr">refs</span>['<span class="hljs-attr">em</span>'] = <span class="hljs-string">node</span>
+                    }}
+                &gt;</span>b<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{function</span> () {
+                    <span class="hljs-attr">console.log</span>('$<span class="hljs-attr">refs</span>', <span class="hljs-attr">self.</span>$<span class="hljs-attr">refs</span>)
+                }} &gt;</span>click<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+
+<span class="hljs-built_in">require</span>(<span class="hljs-string">'react-dom'</span>).render(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Ref</span> /&gt;</span>,
+    document.getElementById('ref-demo')
+)
+</span>
+</code></pre>
+                        </div>
+                        
+                            
+                            
+
+
+
+
+                    </div>
+                                
+<h2 id="themes" ><a class="markrun-anchor" href="../Users/rain2/Documents/onface/util.react/#themes"><span class="markrun-anchor-link"></span></a>themes</h2><blockquote>
+<p>Use themes-classname <a href="https://github.com/onface/themes-classname">https://github.com/onface/themes-classname</a></p>
+</blockquote>
+
+    <div class="face-one-code   face-one-code--run  face-one-code--side">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="themes-demo"></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">themes</div>
+                                <div class="face-one-code-info-desc">
+                                    
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-ellipsis"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source"  >
+                            <div class="face-one-code-source-tool">
+                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADogE8MIvAC0mIpX4A-RgHoWraSAC-AGhBpMuAFYJkIKjToEGrAIYAndgFcC0dt3aWYARxsQXACgDkd6Dgu5uQEPgCUvKjkUOZwcOwAKkIi8di0GPEu7p4wvkEh4TgAwpREAA7UJuzAkex1znSY1l5h1bX1HS4ENpao7F7tHUPszGzSg8OTjGUu0jV9k4sd_lA4gsLwXvNLO0PrKYjsPuhWANY-ahO7SzMwkFhFMXEAcuYihz5EogBGlFg-V2u9RUEQWQPYKnkt3GYKB01m23BQxWa2Sm0RSMm-3gHxOllO7G-EAA5hdAZi6rd7o9YnBXu8jl9fv9yUCQazFpC5NCOVNoRiKSjsXAtrzwcLcWdCSSybCKfUqRAHk86W8YB8mX8AXKkepGXQbOExUMuTydcN5IoYYtQR0VJF7ahIlkPN4fPkCOJSoUXBgYJYBrDGEkNvE5NJLrD0JRyDYRDQcMSYAQAKKweMEABCAE8AJLoXzC8TCShG1Cg1QaMrBU7mJM4PTUMiGajpUwGTBlRp0cgQeDN6K01Bq_QgAB6ACYcFOAGwgDRFwdxYciBiTnAABk385AHrXAEYZzgACzbjQer1EA9H08bncoveIED7nAAdm3Kk_n6AA">
+                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                </form>
+                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> util = require(<span class="hljs-symbol">'util</span>.react')
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Themes</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">require</span>(<span class="hljs-params">'react'</span>).<span class="hljs-title">Component</span> </span>{
+    render () {
+        <span class="hljs-keyword">return</span> (
+            &lt;div&gt;
+                &lt;pre&gt;{
+                    util.themes({
+                        themes: <span class="hljs-symbol">'dar</span>k',
+                        prefixClassName: <span class="hljs-symbol">'m</span>-box'
+                    })
+                }&lt;/pre&gt;
+                &lt;pre&gt;{
+                    util.themes({
+                        themes: <span class="hljs-symbol">'dark</span> big',
+                        prefixClassName: <span class="hljs-symbol">'m</span>-box'
+                    })
+                }&lt;/pre&gt;
+                &lt;pre&gt;{
+                    util.themes({
+                        themes: <span class="hljs-symbol">'dark</span> big',
+                        prefixClassName: <span class="hljs-symbol">'m</span>-box'
+                    }, <span class="hljs-symbol">'men</span>u')
+                }&lt;/pre&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+require(<span class="hljs-symbol">'react</span>-dom').render(
+    &lt;<span class="hljs-type">Themes</span> /&gt;,
+    document.getElementById(<span class="hljs-symbol">'themes</span>-demo')
+)
+
+</code></pre>
+                        </div>
+                        
+                            
+                            
+
+
+
+
+                    </div>
+                                
+<h2 id="createClassNames" ><a class="markrun-anchor" href="../Users/rain2/Documents/onface/util.react/#createClassNames"><span class="markrun-anchor-link"></span></a>createClassNames</h2>
+    <div class="face-one-code   face-one-code--run  face-one-code--side">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="create-classnames-demo"></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">themes</div>
+                                <div class="face-one-code-info-desc">
+                                    
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-ellipsis"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source"  >
+                            <div class="face-one-code-source-tool">
+                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADojkATjACGtALTkoIuHFQii8cZiKV-APkYB6Fq3UgAvgBoQaTLgBWCZAOq16iEKxGD2AVwLR23dsICObhDCABQA5B7QOMIi5AShAJS8qFIycOwAwtG06dKyAHIK8OzY9uhp_oEhodGxCTjplEQADtR0BOzASezd7FSocASCbrGUgsFNgpRNcPEdXT0LcG5NMGMTUzPzC90EeBBwOANiMN4d7HAA7hAE5HiI7INuJwZb7C-oC8IYq-zBs50fbbdPoDc4wKBgU67favBYg9opfKFNI-CJQHBCUTZXJwAqKODBODgsA4dbTRKAoFaLTsUawnrU3rUUGI3HI05ojFZGA5VJ4-CE4mkybTYUwSBYXlIxQUoHdYQENyCD7BelA5hsdRquXdRgTGDqYCs_kE4ChPDoUL3IkQw4EY6HK43PBveIGbT6rWUnXbPXCQ3G5HBAE-0Psc3ocSeAiwK1g21HWiO663IzasPhi1R66wcTiahxm0kxMwZPO9Nygxuj3-ivqvCuLRejMLRgAIw8BGodZ91ByEHIAGtuMA_t51HNvS25UXDjACABle20YM96fdS4pu7sACEs5LZdua7DVePQIM73X7HUm-d2g7BC7qGbYe0uhfQNlPXe70yWJ5OImjgmBgCIbhQAQAAKIoopOCz6hKUpsoo9yhEQ4htpQWChEk7xJBUQQwGENQEMojR1F8mBjK8jB_scSEmuwTZpt66CUOQbiKDQOAAObzgAorAXEEAAQgAngAkugYSYsckg4vI-LKDAqgJEkFKGCYTQxIOIh8TgVjUGQtg0G0xmYCs3zJBA8DGayim2Y4AB6ABMOBuQAbCAJi7CpSj2YUDCuTgAAMoXeSAJFBQAjB5OAACzhSYJFkUQMVxYlIURZyUWONFOAAOzhReJVAA">
+                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                </form>
+                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                            </div>
+                            <pre><code class="lang-js">var util = require('util.react')
+class CreateClassNames extends require('react').Component {
+    constructor(props) {
+        super(props)
+        this.<span class="hljs-keyword">state</span> = { switch: true }
+    }
+    render () {
+        const <span class="hljs-literal">self</span> = this
+        const classNames = util.createClassNames(<span class="hljs-literal">self</span>.props)
+        // or
+        // const classNames = util.createClassNames(<span class="hljs-literal">self</span>.props.prefixClassName)
+        return (
+            <span class="hljs-variable">&lt;div&gt;</span>
+                <span class="hljs-variable">&lt;pre&gt;</span>{classNames({'hd': <span class="hljs-literal">self</span>.<span class="hljs-keyword">state</span>.switch })}&lt;/pre&gt;
+                <span class="hljs-variable">&lt;pre&gt;</span>{classNames({
+                    'hd-title': <span class="hljs-literal">self</span>.<span class="hljs-keyword">state</span>.switch,
+                    'hd-title--on': <span class="hljs-literal">self</span>.<span class="hljs-keyword">state</span>.switch
+                })}&lt;/pre&gt;
+                <span class="hljs-variable">&lt;hr /&gt;</span>
+                <span class="hljs-variable">&lt;button
+                    onClick={() =&gt;</span> {
+                        <span class="hljs-literal">self</span>.<span class="hljs-built_in">set</span>State({
+                            switch: !<span class="hljs-literal">self</span>.<span class="hljs-keyword">state</span>.switch
+                        })
+                    }}
+                &gt;switch&lt;/button&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+CreateClassNames.<span class="hljs-keyword">default</span>Props = {
+    prefixClassName: 'm-box'
+}
+
+require('react-dom').render(
+    <span class="hljs-variable">&lt;CreateClassNames /&gt;</span>,
+    document.getElementById('create-classnames-demo')
+)
+
+</code></pre>
+                        </div>
+                        
+                            
+                            
+
+
+
+
+                    </div>
+                                
+<h2 id="contains" ><a class="markrun-anchor" href="../Users/rain2/Documents/onface/util.react/#contains"><span class="markrun-anchor-link"></span></a>contains</h2>
+    <div class="face-one-code   face-one-code--run  face-one-code--side">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="contains-demo"></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">contains</div>
+                                <div class="face-one-code-info-desc">
+                                    
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-ellipsis"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source"  >
+                            <div class="face-one-code-source-tool">
+                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADohUaAQzRwAtJiKV-APkYB6FqxkgAvgBoQaTLgBWCZAOq16iEKyEAndgFcC0dt3aWYARxsQXACgDkd6DguQuQEPgCUvKjkUEJwcOwAwsYiqPHYJujxLu6eML5BIeE4SUQADtR0BOzAkex17IJwBJY2IZSWXqWWlKVwYdW19UNwNqUwHV09fYNDdQR4EHA4TUK0jgOos1sNyaKI7D4-M7Oqx6eb9S4Y4-xe_TUXW41VcDBQYOvzi8dDFtbREHIAGt1mAbFF7NRbjB7j9tq93ssYAQAMoEVZ5B7bbE7YR7Wz2KA4QTo0ReBFgQIwMBLbqUAjqdgwHDoywAc2REUeONUXOx52xLgINksmy8cK2zDYMglOMYeAATDISSk4PtgAApFEAeQAcstmmg2RAwABPclvSkrWjE3apMKqBSKmXcnH1KUcFxgPggOkEfjsJqm2DcYDAABG7Uwln2PgAjKUsIHKFAuM4YOgfKpVOwXW63R68_ni4xw3YCFDqAlU8DQwDgTmvT64JQiDBZC22woywQK6gi8XJYppbLsQolAPB6Xy5XUNXAUC6zWgY3qT6hOHyLIN-RuzP-6P3cPlLK-fVzudItkPN4fAUCBJW0UrtHxdzGEk8al2PIZOpjuglDkDYbY0DgHIEAAorAoEEAAQqaACS6C-CqogSDAUjhJEXJqJopTBECQgcjg-jUGQRg0JUFGYGM1xRBA8AUdEsRwKgQhtgYIAAHoKjgfEAGwgJo8yYfAYgsXE7FtgwvE4AADApwm-jAwQELJcYCTgAAsSmaPej5EBpWm6fJyn-ES94MHGOAAOxKdmjlAA">
+                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                </form>
+                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util.react'</span>)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Contains</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">require</span>('<span class="hljs-title">react</span>').<span class="hljs-title">Component</span> </span>{
+    <span class="hljs-keyword">constructor</span>(props) {
+        <span class="hljs-keyword">super</span>(props)
+        <span class="hljs-keyword">this</span>.state = {
+            <span class="hljs-attr">contains</span>: <span class="hljs-string">''</span>
+        }
+    }
+    render () {
+        <span class="hljs-keyword">const</span> self = <span class="hljs-keyword">this</span>
+        <span class="hljs-keyword">var</span> click = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+            self.setState({
+                <span class="hljs-attr">contains</span>: util.contains(self.refs.root, e.target)
+            })
+        }
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>contains: {JSON.stringify(self.state.contains)}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"root"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{border:</span> '<span class="hljs-attr">1px</span> <span class="hljs-attr">solid</span> <span class="hljs-attr">red</span>'}} &gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{click}</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"some"</span>&gt;</span>some<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{click}</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"abc"</span>&gt;</span>abc<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+
+<span class="hljs-built_in">require</span>(<span class="hljs-string">'react-dom'</span>).render(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Contains</span> /&gt;</span>,
+    document.getElementById('contains-demo')
+)
+</span>
+</code></pre>
+                        </div>
+                        
+                            
+                            
+
+
+
+
+                    </div>
+                                
+<h3 id="childrenToArray" ><a class="markrun-anchor" href="../Users/rain2/Documents/onface/util.react/#childrenToArray"><span class="markrun-anchor-link"></span></a>childrenToArray</h3><pre><code class="lang-js">console.info(<span class="hljs-string">'childrenToArray'</span>)
+util.childrenToArray(this<span class="hljs-selector-class">.props</span><span class="hljs-selector-class">.children</span>)
+</code></pre>
+<h3 id="flatArray" ><a class="markrun-anchor" href="../Users/rain2/Documents/onface/util.react/#flatArray"><span class="markrun-anchor-link"></span></a>flatArray</h3><p>组件可能被这样使用</p>
+<pre><code class="lang-html">&lt;Select&gt;
+    {
+        data.map(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>{
+            returm (
+                <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{item.value}</span> &gt;</span>{item.text}<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span></span>
+            )
+        })
+    }
+    {
+        <span class="hljs-keyword">this</span>.state.loading?
+        (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">disabled</span> &gt;</span>loading...<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span></span>
+        ):<span class="hljs-literal">null</span>
+    }
+&lt;<span class="hljs-regexp">/Select&gt;</span>
+</code></pre>
+<p>获取的 <code>this.props.children</code> 类似于</p>
+<pre><code class="lang-js">[
+    [
+        (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"a"</span> &gt;</span>a<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span></span>),
+        (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"b"</span> &gt;</span>b<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span></span>)
+    ],
+    (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">disabled</span> &gt;</span>loading<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span></span>)
+]
+</code></pre>
+<p>此时就需要 <code>childrenToArray</code> + <code>flatArray</code></p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.info(<span class="hljs-string">'flatArray'</span>)
+<span class="hljs-built_in">console</span>.log(
+    util.flatArray([
+        <span class="hljs-string">'flat'</span>, <span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>
+    ])
+)
+<span class="hljs-built_in">console</span>.log(
+    util.flatArray([
+        <span class="hljs-string">'flat'</span>, <span class="hljs-number">1</span>,[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>],<span class="hljs-number">3</span>
+    ])
+)
+</code></pre>
+<h2 id="flatElement" ><a class="markrun-anchor" href="../Users/rain2/Documents/onface/util.react/#flatElement"><span class="markrun-anchor-link"></span></a>flatElement</h2><pre><code class="lang-js">util.flatElement(<span class="hljs-keyword">this</span>.props.children)
+<span class="hljs-comment">// 源码</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">flatElement</span> <span class="hljs-params">(children)</span> </span>{
+    <span class="hljs-keyword">return</span> util.flatArray(util.childrenToArray(children)).filter(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(element)</span> </span>{
+        <span class="hljs-keyword">return</span> React.isValidElement(element)
+    })
+}
+</code></pre></div>
+</div>
+</div>
+</div>
+<script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/util.react" class="face-one-foot-group-item-link">util.react</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.live/" class="face-one-foot-group-item-link">onface.live</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-team"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/util.react/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/util.react/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="../index.html" class="face-one-foot-copyright-title">
+                <img src="theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+PACKAGE_JSON = {
+    name: "util.react",
+    $repository: "util.react",
+    version: "1.7.0",
+}
+</script>
+
+<script src="theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="theme/face/face.js" ></script>
+<script data-markrun-lastrun="true">
+                            document.write('<scri' + 'pt src="./ref.demo.js?v=1.7.0"' + '" ></sc' + 'ript>')
+                            </script><script data-markrun-lastrun="true">
+                            document.write('<scri' + 'pt src="./themes.demo.js?v=1.7.0"' + '" ></sc' + 'ript>')
+                            </script><script data-markrun-lastrun="true">
+                            document.write('<scri' + 'pt src="./createClassNames.demo.js?v=1.7.0"' + '" ></sc' + 'ript>')
+                            </script><script data-markrun-lastrun="true">
+                            document.write('<scri' + 'pt src="./contains.demo.js?v=1.7.0"' + '" ></sc' + 'ript>')
+                            </script></body>
+</html>

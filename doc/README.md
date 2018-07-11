@@ -2,6 +2,8 @@
 
 ## icon
 
+> `@icon-name` use `icon.react` 
+
 ````code
 {
     title: 'icon',

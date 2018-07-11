@@ -1,5 +1,17 @@
 # 文档
 
+## icon
+
+````code
+{
+    title: 'icon',
+    desc:'',
+    html:'<div id="icon-demo"></div>',
+    source: './icon.demo.js',
+    side: true
+}
+````
+
 ## ref
 
 ````code

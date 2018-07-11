@@ -52,7 +52,6 @@
                 </div>
             </td>
             <td align="center" >
-
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo">
                     <br />
